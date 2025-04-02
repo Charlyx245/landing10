@@ -18,14 +18,27 @@
                 min-height: 100vh;
                 margin: 0;
                 font-family: 'Roboto Condensed', sans-serif;
-                color: white;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                position: relative;
+            }
+            body::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(245, 194, 50, 0.3); /* Semi-transparent golden overlay */
+                z-index: 1;
             }
             .content {
                 text-align: center;
                 padding: 20px;
+                position: relative;
+                z-index: 2;
+                color: black; /* Text color black */
             }
             .contentLogo img {
                 width: 200px;
@@ -79,6 +92,9 @@
                 gap: 50px;
                 padding: 20px;
                 background-color: rgba(0, 0, 0, 0.5);
+                position: relative;
+                z-index: 2;
+                color: black; /* Text color black */
             }
             .containerItem {
                 display: flex;
@@ -94,11 +110,26 @@
                 margin: 0;
                 font-size: 1rem;
             }
+            .greenBand {
+                background-color: rgba(85, 107, 47, 0.8); /* Semi-transparent green */
+                padding: 10px;
+                position: relative;
+                z-index: 2;
+            }
             .containerAviso {
-                background-color: #1a2526;
+                background-color: #1a2526; /* Dark band */
                 text-align: center;
                 padding: 10px;
                 font-size: 0.9rem;
+                position: relative;
+                z-index: 2;
+                color: white; /* Footer text white */
+            }
+            .greenBandBottom {
+                background-color: rgba(85, 107, 47, 0.8); /* Semi-transparent green */
+                padding: 10px;
+                position: relative;
+                z-index: 2;
             }
         </style>
     </head>
@@ -123,19 +154,22 @@
                 <p>Mínimo de carga <b>$1.000</b></p>
             </div>
         </div>
-        <div class="containerLista">	 
-            <div class="containerItem">
-                <img src='assets/pay.png'>	
-                <p>Aceptamos transferencias de <br>cualquier banco, CBU o CVU.</p>
-            </div>
-            <div class="containerItem">
-                <img src='assets/24hs.png'>	
-                <p>Estamos cargando y pagando<br>las 24 horas</p>
+        <div class="greenBand">
+            <div class="containerLista">	 
+                <div class="containerItem">
+                    <img src='https://royale1.online/assets/pay.png'>	
+                    <p>Aceptamos transferencias de <br>cualquier banco, CBU o CVU.</p>
+                </div>
+                <div class="containerItem">
+                    <img src='https://royale1.online/assets/24hs.png'>	
+                    <p>Estamos cargando y pagando<br>las 24 horas</p>
+                </div>
             </div>
         </div>
-        <footer class="containerAviso">	
+        <div class="containerAviso">	
             <p>Jugar compulsivamente es perjudicial para la salud.<br>Prohibido el juego de azar a menores de 18 años.</p>
-        </footer>
+        </div>
+        <div class="greenBandBottom"></div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>
