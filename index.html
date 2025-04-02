@@ -31,7 +31,7 @@
                 padding: 20px;
                 max-width: 100%;
                 margin: 0 auto;
-                flex-grow: 1; /* Ensures it takes up remaining space */
+                flex-grow: 1;
             }
             .main-content::before {
                 content: '';
@@ -44,14 +44,14 @@
                 z-index: -1;
             }
             .contentLogo img {
-                width: 150px; /* Reduced logo size */
-                height: 112px; /* Maintain aspect ratio */
+                width: 150px;
+                height: 112px;
                 margin: 0 auto;
                 display: block;
             }
             .contentTitle {
-                font-size: 2rem;
-                font-weight: bold;
+                font-size: 2.5rem; /* Increased size */
+                font-weight: 900; /* Bolder */
                 margin: 20px 0;
                 text-transform: uppercase;
             }
@@ -67,8 +67,8 @@
                 align-items: center;
                 justify-content: center;
                 margin: 0 auto;
-                font-size: 1.5rem;
-                font-weight: bold;
+                font-size: 1.8rem; /* Increased size */
+                font-weight: 900; /* Bolder */
                 text-transform: uppercase;
                 color: black;
                 text-decoration: none;
@@ -79,18 +79,21 @@
                 margin-left: 10px;
             }
             .contentLeyenda p {
-                font-size: 1.2rem;
+                font-size: 1.4rem; /* Increased size */
+                font-weight: 700; /* Bolder */
                 margin: 10px 0;
             }
             .bono p {
-                font-size: 1.2rem;
+                font-size: 1.4rem; /* Increased size */
+                font-weight: 700; /* Bolder */
                 margin: 5px 0;
             }
             .bono p b {
-                font-size: 1.3rem;
+                font-size: 1.5rem; /* Increased size */
+                font-weight: 900; /* Bolder */
             }
             .footer {
-                background-color: rgba(85, 107, 47, 0.8); /* Semi-transparent green */
+                background-color: rgba(85, 107, 47, 0.8);
                 position: relative;
                 z-index: 2;
                 color: black;
@@ -99,7 +102,7 @@
             }
             .containerLista {
                 display: flex;
-                flex-direction: row; /* Side by side on all screen sizes */
+                flex-direction: row;
                 justify-content: center;
                 align-items: center;
                 gap: 20px;
@@ -110,32 +113,37 @@
                 align-items: center;
                 gap: 10px;
                 text-align: center;
-                max-width: 150px; /* Reduced width for mobile */
+                max-width: 150px;
             }
             .containerItem img {
-                width: 40px; /* Slightly smaller icons for mobile */
+                width: 40px;
                 height: 40px;
             }
             .containerItem p {
                 margin: 0;
-                font-size: 0.9rem; /* Smaller font for mobile */
+                font-size: 1rem; /* Increased size */
+                font-weight: 700; /* Bolder */
             }
             .containerAviso {
-                background-color: #1a2526; /* Dark band */
+                background-color: #1a2526;
                 padding: 10px;
-                font-size: 0.9rem;
+                font-size: 1rem; /* Increased size */
+                font-weight: 700; /* Bolder */
                 color: white;
             }
             @media (min-width: 768px) {
                 .containerItem {
-                    max-width: 200px; /* Larger width for desktop */
+                    max-width: 200px;
                 }
                 .containerItem img {
                     width: 50px;
                     height: 50px;
                 }
                 .containerItem p {
-                    font-size: 1rem;
+                    font-size: 1.2rem;
+                }
+                .containerAviso {
+                    font-size: 1.1rem;
                 }
             }
         </style>
@@ -157,7 +165,7 @@
                 <p>HACE CLIC EN EL BOTON PARA <br> CREAR TU USUARIO</p>
             </div>
             <div class="bono">
-                <p><b>TODOS LOS DIAS<br>20% EN TU PRIMERA CARGA</b></p>	
+                <p><b>TODOS LOS DIAS<br>20% EN<br>20% EN TU PRIMERA CARGA</b></p>	
                 <p>Mínimo de carga <b>$1.000</b></p>
             </div>
         </div>
