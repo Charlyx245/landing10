@@ -31,6 +31,7 @@
                 padding: 20px;
                 max-width: 100%;
                 margin: 0 auto;
+                flex-grow: 1; /* Ensures it takes up remaining space */
             }
             .main-content::before {
                 content: '';
@@ -43,8 +44,8 @@
                 z-index: -1;
             }
             .contentLogo img {
-                width: 200px;
-                height: 150px;
+                width: 150px; /* Reduced logo size */
+                height: 112px; /* Maintain aspect ratio (150/200 * 150) */
                 margin: 0 auto;
                 display: block;
             }
@@ -98,7 +99,8 @@
             }
             .containerLista {
                 display: flex;
-                flex-direction: column;
+                flex-direction: row; /* Side by side on all screen sizes */
+                justify-content: center;
                 align-items: center;
                 gap: 20px;
                 padding: 20px 0;
@@ -108,15 +110,15 @@
                 align-items: center;
                 gap: 10px;
                 text-align: center;
-                max-width: 300px;
+                max-width: 150px; /* Reduced width for mobile */
             }
             .containerItem img {
-                width: 50px;
-                height: 50px;
+                width: 40px; /* Slightly smaller icons for mobile */
+                height: 40px;
             }
             .containerItem p {
                 margin: 0;
-                font-size: 1rem;
+                font-size: 0.9rem; /* Smaller font for mobile */
             }
             .containerAviso {
                 background-color: #1a2526; /* Dark band */
@@ -125,10 +127,15 @@
                 color: white;
             }
             @media (min-width: 768px) {
-                .containerLista {
-                    flex-direction: row;
-                    justify-content: center;
-                    gap: 50px;
+                .containerItem {
+                    max-width: 200px; /* Larger width for desktop */
+                }
+                .containerItem img {
+                    width: 50px;
+                    height: 50px;
+                }
+                .containerItem p {
+                    font-size: 1rem;
                 }
             }
         </style>
